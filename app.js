@@ -26,7 +26,7 @@ const maps = new Maps();
 const settings = new Settings();
 
 const authMiddleware = basicAuth({
-  challenge: true,
+  challenge: false,
   authorizer: function(user, password) {
     if (process.env.DM_PASSWORD) {
       return password === process.env.DM_PASSWORD;
